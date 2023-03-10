@@ -7,6 +7,8 @@ import urllib
 #from pytrends.request import TrendReq
 import sqlite3
 import datetime
+from google_trends import daily_trends, realtime_trends
+
 
 
 def newsroot(link):
@@ -42,11 +44,12 @@ def gazeteoku(link):
     return haber_rows
 
 
-def trendgetir(kelime="turkey"):
-    pytrend = TrendReq()
-    df = pytrend.trending_searches(pn=kelime)
-    anliktrendler = list(df.head(50)[0])
-    return anliktrendler
+def trendgetir():
+    real_trends = realtime_trends(country='TR', language='tr-TR', category='all', num_results=40)
+    liste = []
+    for a in real_trends:
+        liste = liste + a['entity_names']
+    return liste
 
 
 def dbTrendEkle():
