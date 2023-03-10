@@ -4,4 +4,4 @@ sqlite3
 pytrends
 urllib
 datetime
-git+https://github.com/google_trends#egg=google_trends
+git+https://github.com/google_trends@main#egg=google_trends
