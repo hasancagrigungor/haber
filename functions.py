@@ -7,8 +7,7 @@ import urllib
 #from pytrends.request import TrendReq
 import sqlite3
 import datetime
-from google_trends import daily_trends, realtime_trends
-!pip install google_trends
+
 
 
 
@@ -45,12 +44,7 @@ def gazeteoku(link):
     return haber_rows
 
 
-def trendgetir():
-    real_trends = realtime_trends(country='TR', language='tr-TR', category='all', num_results=40)
-    liste = []
-    for a in real_trends:
-        liste = liste + a['entity_names']
-    return liste
+
 
 
 def dbTrendEkle():
