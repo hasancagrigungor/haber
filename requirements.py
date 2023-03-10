@@ -4,5 +4,5 @@ sqlite3
 pytrends
 urllib
 datetime
-googletrends
-google_trends
+
+pip install google_trends
