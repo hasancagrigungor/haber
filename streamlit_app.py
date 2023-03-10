@@ -4,10 +4,7 @@ import streamlit as st
 ft.topluHaberEkle()
 df=ft.haberGetir()
 
-st.sidebar.subheader("Popüler Anahtar Kelimeler")
-liste=ft.trendgetir()
-for a in liste:
-    st.sidebar.error(a)
+
 
 
 dakika=round(df['kalan'].dt.total_seconds()/60)
