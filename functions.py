@@ -8,6 +8,7 @@ import urllib
 import sqlite3
 import datetime
 from google_trends import daily_trends, realtime_trends
+!pip install google_trends
 
 
 
