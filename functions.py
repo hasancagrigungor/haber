@@ -4,7 +4,7 @@ import numpy as np
 from urllib.request import urlopen
 import xml.etree.ElementTree as et
 import urllib
-from pytrends.request import TrendReq
+#from pytrends.request import TrendReq
 import sqlite3
 import datetime
 
