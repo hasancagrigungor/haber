@@ -5,3 +5,4 @@ pytrends
 urllib
 datetime
 googletrends
+google_trends
