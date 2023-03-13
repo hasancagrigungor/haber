@@ -33,11 +33,14 @@ for haber in sozluk.keys():
 
 hide_streamlit_style = """
             <style>
+            .viewerBadge_link__1S137 {display:none!important;}
+            .viewerBadge_link__1S137 {visibility: hidden!important;}
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
             .viewerBadge_container__1QSob {visibility: hidden!important;}
-            .viewerBadge_link__1S137 {display:none;}
+            
+           
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
