@@ -5,9 +5,9 @@ ft.topluHaberEkle()
 gunluk_trends=ft.trendsfull()
 df=ft.haberGetir()
 
-
+st.sidebar.title("Anlık Popüler")
 for a in gunluk_trends:
-    st.sidebar.error(a[0))
+    st.sidebar.error(a[0])
 
 
 dakika=round(df['kalan'].dt.total_seconds()/60)
