@@ -35,6 +35,7 @@ hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
+            header {visibility: hidden;}
             .viewerBadge_link__1S137 {visibility: hidden;}
             </style>
             """
