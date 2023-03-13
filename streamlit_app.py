@@ -7,7 +7,7 @@ df=ft.haberGetir()
 
 
 for a in gunluk_trends:
-    st.sidebar.error(a[0)
+    st.sidebar.error(a[0))
 
 
 dakika=round(df['kalan'].dt.total_seconds()/60)
