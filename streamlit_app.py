@@ -2,9 +2,12 @@ import functions as ft
 import streamlit as st
 
 ft.topluHaberEkle()
+gunluk_trends=ft.trendsfull()
 df=ft.haberGetir()
 
 
+for a in gunluk_trends:
+    st.sidebar.error(a[0)
 
 
 dakika=round(df['kalan'].dt.total_seconds()/60)
