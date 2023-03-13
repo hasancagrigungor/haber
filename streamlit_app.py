@@ -5,7 +5,8 @@ ft.topluHaberEkle()
 gunluk_trends=ft.trendsfull()
 df=ft.haberGetir()
 
-st.sidebar.title("Anlık Popüler")
+st.sidebar.title("Anlık Keyword")
+gunluk_trends.reverse()
 for a in gunluk_trends:
     st.sidebar.error(a[0])
 
