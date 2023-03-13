@@ -131,3 +131,27 @@ def haberGetir():
 
     return df2
 
+def trendsfull():
+    link="https://trends.google.com.tr/trends/trendingsearches/daily/rss?geo=TR"
+    req = urllib.request.Request(link, headers={'User-Agent' : "Magic Browser"}) 
+    con = urllib.request.urlopen( req )
+    xml=et.ElementTree(file=con)
+    root=xml.getroot()
+    gun=datetime.datetime.today()
+    conn=sqlite3.connect("haberasistan.sqlite3")
+    c=conn.cursor()
+    c.execute("CREATE TABLE IF NOT EXISTS trends(kelime TEXT,tarih TEXT)")
+    conn.commit()
+    for a in root[0].findall("item"):
+        k=a[0].text
+        t=gun.date()
+        c.execute("SELECT * FROM trends WHERE kelime=? AND tarih=?",(k,t))
+        tgetir=c.fetchall()
+        if len(tgetir)==0:
+            c.execute("INSERT INTO trends VALUES(?,?)",(k,t))
+            conn.commit()
+        
+    c.execute("SELECT * FROM trends ORDER BY rowid DESC LIMIT 20")
+    sonuc=c.fetchall()
+    return sonuc
+
