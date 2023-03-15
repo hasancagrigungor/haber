@@ -1,6 +1,28 @@
 import functions as ft
 import streamlit as st
 
+def giris():
+    st.title("Haber Asistan V 1.2")
+    with st.form("giriş",clear_on_submit=True):
+        username=st.text_input("Kullanıcı Adı")
+        password=st.text_input("Şifre",type="password")
+        buton=st.form_submit_button("Giriş Yap")
+        if buton:
+            if username=="merve" and password=="1903":
+                st.session_state["key"]="1"
+                st.experimental_rerun()
+
+
+        else:
+            st.stop()
+
+if "key" not in st.session_state:
+    giris()
+
+
+
+st.button("Yenile")
+
 ft.topluHaberEkle()
 gunluk_trends=ft.trendsfull()
 df=ft.haberGetir()
