@@ -4,7 +4,7 @@ import streamlit as st
 
 @st.cache()
 def giris():
-    st.title("Haber Asistan V 1.2")
+    
     with st.form("giriş",clear_on_submit=True):
         username=st.text_input("Kullanıcı Adı")
         password=st.text_input("Şifre",type="password")
