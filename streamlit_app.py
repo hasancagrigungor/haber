@@ -17,6 +17,8 @@ def giris():
             if users.get(username)==password:
                 st.session_state["key"]="1"
                 st.experimental_rerun()
+            else:
+                st.error("Kullanıcı Adı veya Şifre Hatalı")
 
 
         else:
