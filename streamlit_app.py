@@ -4,13 +4,17 @@ import streamlit as st
 
 
 def giris():
+    users={
+        "merve":"19031903",
+        "nazli":"Q7.ihaber",
+    }
     st.title("Haber Asistan V 1.2")
     with st.form("giriş",clear_on_submit=True):
         username=st.text_input("Kullanıcı Adı")
         password=st.text_input("Şifre",type="password")
         buton=st.form_submit_button("Giriş Yap")
         if buton:
-            if username=="merve" and password=="1903":
+            if users.get(username)==password:
                 st.session_state["key"]="1"
                 st.experimental_rerun()
 
